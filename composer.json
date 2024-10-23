@@ -1,0 +1,31 @@
+{
+    "name": "tastaturberuf/contao-datacontainer-bundle",
+    "description": "Define data container configuration with classes/services instead of plain php files",
+    "type": "contao-library",
+    "license": "LGPL-3.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "Tastaturberuf\\ContaoDataContainerBundle\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tastaturberuf",
+            "email": "mail@tastaturberuf.de"
+        }
+    ],
+    "conflict": {
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "require": {
+        "php": "^8.1",
+        "contao/core-bundle": "^4.13 || ^5.3"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "contao/manager-plugin": "^2.0"
+    },
+    "extra": {
+        "contao-manager-plugin": "Tastaturberuf\\ContaoDataContainerBundle\\ContaoManager\\Plugin"
+    }
+}
