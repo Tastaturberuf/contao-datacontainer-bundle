@@ -30,7 +30,6 @@ final class DataContainerListener
     /**
      * Since we only generate the DCA configuration in hooks, DCA files are no longer created. This means that the DCAs
      * are no longer loaded automatically, as they are loaded using the files and only then is the hook executed.
-     * You need to tag your data container with 'loadDataContainer'
      */
     #[AsHook('sqlGetFromDca', priority: PHP_INT_MAX)]
     public function sqlGetFromDca(array $sql): array
