@@ -1,5 +1,5 @@
 [![Version](http://img.shields.io/packagist/v/tastaturberuf/contao-datacontainer-bundle)](https://packagist.org/packages/tastaturberuf/contao-datacontainer-bundle)
-[![Contao Version](https://img.shields.io/badge/contao--version-^4.13-%23F47C00)](https://contao.org)
+[![Contao Version](https://img.shields.io/badge/contao--version-^4.13_||_^5.3-%23F47C00)](https://contao.org)
 [![Release](https://img.shields.io/github/release-date/tastaturberuf/contao-datacontainer-bundle)](https://github.com/Tastaturberuf/contao-datacontainer-bundle)
 
 # From Data Container Array to Data Container Class
