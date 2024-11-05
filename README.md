@@ -16,7 +16,7 @@ Define data container configuration with classes/services instead of plain PHP f
 
 ## How?
 A compiler pass tag all classes which implement `Tastaturberuf\ContaoDataContainerBundle\DataContainerInterface` with the tag `tastaturberuf.datacontainer.autoload`.
-An event lister with the iterable classes listen to the `loadDataContainer` hook and recursive merge the array if the table name matches.
+An event listener with the iterable classes listen to the `loadDataContainer` hook and recursive merge the array if the table name matches.
 
 Litte bit of magic:
 On migrations the table name is unknown if the are no DCA files present. The hook `sqlGetFromDca` take care that the definitions get loaded properly.
