@@ -31,6 +31,7 @@ class TagServicesByInterfacePass implements CompilerPassInterface
 
                 if ($reflectionClass->implementsInterface(DataContainerInterface::class) && !$definition->hasTag(self::TAG)) {
                     $definition->addTag(self::TAG);
+                    $definition->setAbstract(false);
                 }
             } catch (Throwable $e) {
                 continue;
