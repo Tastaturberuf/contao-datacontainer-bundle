@@ -6,7 +6,9 @@ namespace Tastaturberuf\ContaoDataContainerBundle\EventListener;
 
 use Contao\CoreBundle\DependencyInjection\Attribute\AsHook;
 use Contao\DcaExtractor;
+use Symfony\Component\DependencyInjection\Attribute\TaggedIterator;
 use Tastaturberuf\ContaoDataContainerBundle\DataContainerInterface;
+use Tastaturberuf\ContaoDataContainerBundle\DependencyInjection\Compiler\TagServicesByInterfacePass;
 
 
 final class DataContainerListener
@@ -18,7 +20,9 @@ final class DataContainerListener
     private array $configs = [];
 
 
-    public function __construct(iterable $configs)
+    public function __construct(
+        #[TaggedIterator(TagServicesByInterfacePass::TAG)] iterable $configs
+    )
     {
         foreach ($configs as $config) {
             if ($config instanceof DataContainerInterface) {
