@@ -21,7 +21,7 @@ final class DataContainerListener
 
 
     public function __construct(
-        #[TaggedIterator(TagServicesByInterfacePass::TAG)] iterable $configs
+        #[TaggedIterator('tastaturberuf.datacontainer.autoload')] iterable $configs
     )
     {
         foreach ($configs as $config) {
